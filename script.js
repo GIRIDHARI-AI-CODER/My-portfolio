@@ -37,7 +37,12 @@ const observer = new IntersectionObserver((entries) => {
 hiddenElements.forEach((el) => observer.observe(el));
 
 // 4. Simple Typewriter Effect
-const words = ["Scalable Systems.", "Digital Experiences.", "Clean Code."];
+const words = ["Scalable Systems.", "Digital Experiences.", "Clean CodeScalable Systems", 
+    "Full-Stack Applications", 
+    "Enterprise Solutions", 
+    "Robust REST APIs",
+    "Modern Web Experiences"
+];
 let wordIndex = 0;
 let letterIndex = 0;
 let currentWord = "";
