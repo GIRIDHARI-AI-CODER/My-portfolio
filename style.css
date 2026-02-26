@@ -96,9 +96,9 @@ section { max-width: 1200px; margin: auto; padding: 120px 5%; }
 .social-btn:hover { background: #24292e; transform: translateY(-5px); }
 .linkedin-btn:hover { background: #0077b5; }
 
-/* --- ANIMATIONS (Scroll Reveal) --- */
+/* --- ANIMATIONS (Scroll Reveal) --- 
 .hidden { opacity: 0; transform: translateY(30px); transition: 0.8s; }
-.show { opacity: 1; transform: translateY(0); }
+.show { opacity: 1; transform: translateY(0); }*/
 
 /* ========================================= */
 /* 1. KILLS LEFT-RIGHT SCROLL (Permanent Fix)*/
