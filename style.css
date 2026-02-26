@@ -100,15 +100,51 @@ section { max-width: 1200px; margin: auto; padding: 120px 5%; }
 .hidden { opacity: 0; transform: translateY(30px); transition: 0.8s; }
 .show { opacity: 1; transform: translateY(0); }
 
-/* --- MOBILE --- */
-@media (max-width: 768px) {
-    .hero { flex-direction: column-reverse; text-align: center; }
-    .gradient-text { font-size: 3rem; }
-    .menu-toggle { display: block; }
-    .nav-links { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: #111; flex-direction: column; padding: 20px 0; }
-    .nav-links.active { display: flex; }
-    .ss-heading { font-size: 2.5rem; }
+/* ========================================= */
+/* MOBILE VIEW FIXES (Skills & Project Tags) */
+/* ========================================= */
+
+/* Fix 1: Project Tags (Skills) jo bahar nikal rahe hain */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap; /* YEH LINE JADOO HAI: Screen choti hone par tags apne aap neeche wali line mein aa jayenge */
+    gap: 10px;
+    margin: 20px 0;
 }
+
+/* Fix 2: Skills Section ko mobile par chota (compact) karna */
+@media (max-width: 768px) {
+    
+    /* Skills Grid ke dabbe chote kar diye taaki ek line mein 3-4 aa jayein */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* Mobile par ek line mein exactly 3 skills dikhenge */
+        gap: 10px; /* Dabbon ke beech ka gap kam kar diya */
+    }
+    
+    /* Skill wale dabbon (Glass) ki padding aur size chota kar diya */
+    .skill-glass {
+        padding: 15px 10px; /* Andar ka space kam kiya */
+        border-radius: 12px;
+    }
+    
+    /* Icons ko chota kar diya */
+    .skill-glass i {
+        font-size: 2rem; /* Pehle 3rem tha, ab chota aur neat lagega */
+        margin-bottom: 8px;
+    }
+    
+    /* Text ko mobile ke hisaab se adjust kiya */
+    .skill-glass p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+
+    /* Project Cards ki padding thodi kam ki taaki mobile par fit aaye */
+    .project-card {
+        padding: 25px; 
+    }
+}
+
 /* --- PREMIUM CONTACT FORM STYLES --- */
 .glass-form {
     max-width: 500px;
