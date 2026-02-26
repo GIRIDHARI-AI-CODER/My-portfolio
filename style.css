@@ -101,53 +101,68 @@ section { max-width: 1200px; margin: auto; padding: 120px 5%; }
 .show { opacity: 1; transform: translateY(0); }
 
 /* ========================================= */
-/* HERO SECTION MOBILE FIX (Photo Centering) */
+/* 1. KILLS LEFT-RIGHT SCROLL (Permanent Fix)*/
 /* ========================================= */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+}
 
+/* ========================================= */
+/* 2. HERO SECTION MOBILE FIX (Photo Centered)*/
+/* ========================================= */
 @media (max-width: 768px) {
-    /* Container ko upar-neeche (column) mein set karna */
+    /* Container ko stack (upar-neeche) karna */
     .hero {
-        flex-direction: column-reverse !important; /* Photo upar, Text neeche aayega */
-        text-align: center;
-        padding-top: 120px; /* Upar se thoda space */
-        gap: 30px;
+        flex-direction: column-reverse !important; /* Photo upar, text neeche */
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding-top: 100px !important;
+        gap: 30px !important;
     }
 
-    /* Text aur Buttons ko center mein lana */
+    /* Text section ko center karna */
     .hero-text {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
+    /* Buttons ko center karna */
     .hero-buttons {
-        justify-content: center;
-        width: 100%;
+        justify-content: center !important;
+        flex-wrap: wrap !important; /* Agar screen choti ho toh button toot kar neeche aayein */
+        width: 100% !important;
     }
 
-    /* Photo container ko exactly center mein lana */
+    /* 🔥 PHOTO KO EXACT CENTER MEIN RAKHNA 🔥 */
     .hero-image-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto !important; /* Force center */
+        position: relative !important;
     }
 
-    /* Mobile ke hisaab se photo ko thoda chota aur center karna */
+    /* Photo ka size mobile ke hisaab se set karna */
     .profile-img {
-        width: 280px !important;
-        height: 280px !important;
-        margin: 0 auto;
+        width: 260px !important;
+        height: 260px !important;
+        display: block !important;
+        margin: 0 auto !important; /* Double force center */
     }
 
-    /* Piche wale Pink/Blue glow ko bhi photo ke barabar chota karna */
+    /* Piche wale color glow ko photo ke piche center karna */
     .image-glow {
-        width: 280px !important;
-        height: 280px !important;
+        width: 260px !important;
+        height: 260px !important;
         left: 50% !important;
-        transform: translateX(-50%) !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important; /* Exactly piche fit karega */
     }
 }
 /* --- PREMIUM CONTACT FORM STYLES --- */
